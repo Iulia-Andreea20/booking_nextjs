@@ -1,8 +1,12 @@
 # booking_nextjs
 Booking clone using NEXT.js framework and SQL
 
+# Requirements
 ```bash
 npm install mysql2
+npm install react-icons
+npm install react-datepicker
+npm install bcryptjs
 ```
 Click the link below to see the Booking Demo:
 
