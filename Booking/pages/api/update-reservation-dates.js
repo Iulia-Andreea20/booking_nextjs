@@ -1,11 +1,11 @@
-import pool from '@utils/database'
+import pool from '@Booking/utils/database'
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { IdRezervari, DataInceputCazare, DataSfarsitCazare } = req.body;
 
         try {
-            const result = await pool.query('UPDATE Rezervari SET DataInceputCazare = ?, DataSfarsitCazare = ? WHERE IdRezervari = ?', 
-            [DataInceputCazare, DataSfarsitCazare, IdRezervari]);
+            const result = await pool.query('UPDATE Rezervari SET DataInceputCazare = ?, DataSfarsitCazare = ? WHERE IdRezervari = ?',
+                [DataInceputCazare, DataSfarsitCazare, IdRezervari]);
 
             console.log(result);
 

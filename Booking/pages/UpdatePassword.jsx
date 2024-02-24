@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '@styles/globals.css'
 import { useRouter } from 'next/router';
-import { useAuth } from '@context/AuthContext';
+import { useAuth } from '@Booking/context/AuthContext';
 
 const UpdatePassword = ({ useEmail }) => {
     const [Email, setEmail] = useState('');

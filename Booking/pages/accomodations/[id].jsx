@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { format } from 'date-fns';
-import Calendar from '@components/Calendar';
+import Calendar from '@Booking/app/components/Calendar';
 import styles from '@styles/globals.css';
-import PopupMessage from '@components/PopupMessage';
+import PopupMessage from '@Booking/app/components/PopupMessage';
 import { ro } from 'date-fns/locale';
 import React
     from 'react';

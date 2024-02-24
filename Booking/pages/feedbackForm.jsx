@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import styles from '@styles/globals.css';
-import StarRating from '@components/StarRating';
+import StarRating from '@Booking/app/components/StarRating';
 import { useRouter } from 'next/router';
 
 const feedbackForm = () => {
@@ -17,7 +17,7 @@ const feedbackForm = () => {
 
         setFormData(prevFormData => ({
             ...prevFormData,
-            Rating: selectedRating 
+            Rating: selectedRating
         }));
         console.log(`Selected rating: ${selectedRating}`);
     }
@@ -26,7 +26,7 @@ const feedbackForm = () => {
         const { value } = event.target;
         setFormData(prevFormData => ({
             ...prevFormData,
-            Feedback: value 
+            Feedback: value
         }));
     }
 

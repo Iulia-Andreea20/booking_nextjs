@@ -1,7 +1,7 @@
-import Navbar from '@components/Navbar';
-import Footer from '@components/Footer';
+import Navbar from '@Booking/app/components/Navbar';
+import Footer from '@Booking/app/components/Footer';
 import styles from '@styles/globals.css';
-import StarRating from '@components/StarRating';
+import StarRating from '@Booking/app/components/StarRating';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';

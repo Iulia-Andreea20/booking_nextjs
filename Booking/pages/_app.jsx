@@ -1,7 +1,7 @@
-import Layout from '../components/Layout';
+import Layout from '../app/components/Layout';
 import { AuthProvider } from '../context/AuthContext';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../app/components/Navbar';
+import Footer from '../app/components/Footer';
 import '../styles/globals.css';
 import { useRouter } from 'next/router';
 

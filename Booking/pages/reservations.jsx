@@ -1,11 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Layout from '@components/Layout';
-import Footer from '@components/Footer';
+import Layout from '@Booking/app/components/Layout';
+import Footer from '@Booking/app/components/Footer';
 import moment from 'moment-timezone';
-import LocationsList from '@components/LocationsList';
-import Calendar from '@components/Calendar';
+import LocationsList from '@Booking/app/components/LocationsList';
+import Calendar from '@Booking/app/components/Calendar';
 import { ro } from 'date-fns/locale';
 import { parseISO, format } from 'date-fns';
 
@@ -76,7 +76,7 @@ const ReservationsPage = () => {
                     },
                     body: JSON.stringify({
                         IdRezervari: selectedReservationId,
-                        DataInceputCazare: startDate ? formatDateForDatabase(startDate) : null, 
+                        DataInceputCazare: startDate ? formatDateForDatabase(startDate) : null,
                         DataSfarsitCazare: endDate ? formatDateForDatabase(endDate) : null,
                     }),
                 });
@@ -85,8 +85,8 @@ const ReservationsPage = () => {
                 if (data.success) {
                     setTimeout(() => {
                         setShowPopup(false);
-                        fetchReservations(); 
-                        setShowDatePicker(false); 
+                        fetchReservations();
+                        setShowDatePicker(false);
                     }, 3000);
                 } else {
                     console.error('Failed to update reservation:', data.message);

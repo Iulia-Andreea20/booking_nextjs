@@ -1,6 +1,6 @@
 // components/UserIcon.jsx
 import styles from '@styles/globals.css';
-import { useAuth } from '@context/AuthContext';
+import { useAuth } from '@Booking/context/AuthContext';
 import { useState, useRef, useEffect } from 'react';
 import { FaLock, FaSignOutAlt, FaTrashAlt, FaSuitcase } from 'react-icons/fa';
 
@@ -15,7 +15,7 @@ const UserIcon = ({ user }) => {
 
     const handleLogout = () => {
         logout();
-        setMenuOpen(false); 
+        setMenuOpen(false);
     };
     const [showPopup, setShowPopup] = useState(false);
 
@@ -57,7 +57,7 @@ const UserIcon = ({ user }) => {
         try {
             console.log(Email);
             const response = await fetch('http://localhost:3000/api/delete-account', {
-                method: 'DELETE', 
+                method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
                 },

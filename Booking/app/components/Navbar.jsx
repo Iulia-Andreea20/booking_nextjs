@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import UserIcon from './UserIcon';
-import { useAuth } from '@context/AuthContext';
+import { useAuth } from '@Booking/context/AuthContext';
 
 const Navbar = () => {
     const { user, logout } = useAuth();

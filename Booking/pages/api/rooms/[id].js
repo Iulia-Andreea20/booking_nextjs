@@ -1,4 +1,4 @@
-import pool from '@utils/database';
+import pool from '@Booking/utils/database';
 
 export default async function handler(req, res) {
     const {

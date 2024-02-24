@@ -1,4 +1,4 @@
-import pool from '@utils/database';
+import pool from '@Booking/utils/database';
 import { min } from 'date-fns';
 
 export default async function handler(req, res) {
