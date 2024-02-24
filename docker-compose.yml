@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: unless-stopped
+    env_file: ./.env.db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=Booking
+    ports:
+      - $MYSQLDB_LOCAL_PORT:3306
+    # volumes:
+    #   - db:/booking/
+  app:
+    depends_on:
+      - mysqldb
+    build: ./booking
+    restart: unless-stopped
+    env_file: ./.env.db
+    ports:
+      - $NODE_LOCAL_PORT:6868
+    environment:
+      - DB_HOST=localhost
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=Booking
+      - DB_PORT=3306
+    stdin_open: true
+    tty: true
+# volume:
+#   db: 
